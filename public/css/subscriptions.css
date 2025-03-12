@@ -1,0 +1,67 @@
+/* Subscriptions Page Styles */
+.subscriptions-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+    background-color: #f8f9fa;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    font-size: 2rem;
+    color: white ;
+}
+
+.subscriptions-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Empty state styles */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.empty-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 2rem;
+    filter: invert(31%) sepia(93%) saturate(1352%) hue-rotate(194deg) brightness(91%) contrast(101%);
+    opacity: 0.5;
+}
+
+.empty-state h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.empty-state p {
+    color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+.empty-state .btn {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 992px) {
+    .subscriptions-page {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .subscriptions-page {
+        padding: 1rem;
+    }
+}

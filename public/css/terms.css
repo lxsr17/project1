@@ -1,0 +1,101 @@
+/* Terms of Use Page Styles */
+.terms-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+    background-color: #f8f9fa;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+    
+}
+
+.page-title {
+    font-size: 2rem;
+    color: rgb(255, 255, 255) ;
+}
+
+.terms-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.terms-intro {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.terms-section {
+    margin-bottom: 2.5rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.section-content {
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.section-content p {
+    margin-bottom: 1rem;
+}
+
+.section-content ol {
+    padding-right: 1.5rem;
+    margin-bottom: 1rem;
+    counter-reset: item;
+}
+
+.section-content ol > li {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-content ol ol {
+    margin: 1rem 0;
+    padding-right: 2rem;
+}
+
+.section-content ol ol > li {
+    margin-bottom: 0.5rem;
+}
+
+.definition-list dt {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.definition-list dd {
+    margin-bottom: 1.5rem;
+    padding-right: 1rem;
+    color: var(--light-text);
+}
+
+@media (max-width: 992px) {
+    .terms-page {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .terms-page {
+        padding: 1rem;
+    }
+
+    .terms-container {
+        padding: 1.5rem;
+    }
+}
