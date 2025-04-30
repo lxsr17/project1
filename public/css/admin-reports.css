@@ -1,0 +1,55 @@
+.reports-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.reports-table th, .reports-table td {
+    padding: 12px;
+    border: 1px solid #eee;
+    text-align: center;
+}
+
+.report-type.store { color: #2980b9; }
+.report-type.user { color: #27ae60; }
+.report-type.product { color: #8e44ad; }
+.report-type.review { color: #c0392b; }
+
+.report-status.new { color: #e67e22; }
+.report-status.inProgress { color: #f1c40f; }
+.report-status.closed { color: #95a5a6; }
+
+.actions img {
+    width: 18px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-close {
+    float: right;
+    font-size: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+

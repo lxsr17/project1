@@ -1,0 +1,85 @@
+body {
+    background-color: #f1f3f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.invoice-wrapper {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.invoice-box {
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+}
+
+.invoice-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0d6efd;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.invoice-details {
+    text-align: right;
+    margin-bottom: 2rem;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.03);
+}
+
+.invoice-details p {
+    font-size: 1.1rem;
+    margin: 0.75rem 0;
+    color: #333;
+    line-height: 1.8;
+}
+
+.invoice-details strong {
+    color: #000;
+    width: 110px;
+    display: inline-block;
+}
+
+.invoice-actions {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-pay {
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
+    background-color: #198754;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-pay:hover {
+    background-color: #157347;
+}
+
+@media (max-width: 768px) {
+    .invoice-box {
+        padding: 2rem 1.5rem;
+    }
+
+    .invoice-details {
+        text-align: center;
+    }
+}

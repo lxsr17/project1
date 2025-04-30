@@ -1,0 +1,517 @@
+/* ---------------------- Store Details Page Styles ---------------------- */
+.store-details-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+    background-color: #f4f7ff;
+}
+
+
+
+
+/* ---------------------- General Card ---------------------- */
+.card,
+.store-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.store-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.store-section h2 img {
+    width: 20px;
+    height: 20px;
+    filter: invert(31%) sepia(93%) saturate(1352%) hue-rotate(194deg) brightness(91%) contrast(101%);
+}
+
+/* ---------------------- Store Header ---------------------- */
+.store-header {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.store-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid #ddd;
+}
+
+.store-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.store-basic-info {
+    flex: 1;
+}
+
+.store-basic-info h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.store-category {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.store-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.stars {
+    color: #ffd700;
+    letter-spacing: 2px;
+}
+
+.rating-value {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.rating-count {
+    color: var(--light-text);
+}
+
+/* لون خلفية شعار المتجر حسب نوع التوثيق */
+.logo-gold {
+    background: linear-gradient(135deg, #FFD700, #FFC107);
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.logo-silver {
+    background: linear-gradient(135deg, #C0C0C0, #B0B0B0);
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.logo-normal {
+    background: #f8f9fa;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.store-logo-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.store-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.store-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.tabs-header {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.tab-button {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #888;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab-button.active {
+    color: #004aad;
+    border-bottom-color: #004aad;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ---------------------- Badges ---------------------- */
+.store-badges {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.badge.verified {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: background-color 0.3s;
+}
+
+.badge.verified img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+
+/* ---------------------- Share Button ---------------------- */
+.store-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.btn-share {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    background: white;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-share:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-share img {
+    width: 16px;
+    height: 16px;
+    filter: invert(31%) sepia(93%) saturate(1352%) hue-rotate(194deg) brightness(91%) contrast(101%);
+}
+
+.btn-share:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* ---------------------- Contact Info ---------------------- */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.contact-item:hover {
+    background: #f0f2f5;
+}
+
+.contact-item img {
+    width: 20px;
+    height: 20px;
+    filter: invert(31%) sepia(93%) saturate(1352%) hue-rotate(194deg) brightness(91%) contrast(101%);
+}
+
+.contact-item span,
+.contact-item a {
+    color: var(--light-text);
+}
+
+.contact-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-right: auto;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------- Social Icons ---------------------- */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 0.5rem;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+
+.social-links img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+
+/* ---------------------- Reviews ---------------------- */
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.review-item {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.review-item:hover {
+    transform: translateX(-4px);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.review-comment {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.review-date {
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+/* ---------------------- Action Buttons ---------------------- */
+.btn-whatsapp {
+    background-color: #25d366;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.btn-call {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.btn-whatsapp:hover,
+.btn-call:hover {
+    opacity: 0.9;
+}
+
+/* ---------------------- Responsive ---------------------- */
+@media (max-width: 992px) {
+    .store-details-page {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .store-details-page {
+        padding: 1rem;
+    }
+    .store-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .store-actions {
+        width: 100%;
+        align-items: center;
+    }
+    .store-section {
+        padding: 1.5rem;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modal.active {
+        display: flex;
+    }
+    
+    .modal-content {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        max-width: 500px;
+        width: 90%;
+        position: relative;
+    }
+    
+    .close-button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    
+
+/* ==== تقييم المتجر - مدمج من style inline ==== */
+
+
+.back-button-container {
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    direction: ltr;
+}
+
+.btn-back:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-back img {
+    width: 16px;
+    height: 16px;
+    transform: scaleX(-1);
+}
+
+.review-form-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.review-form-box textarea {
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid #b0a87d;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 10px;
+    font-size: 30px; /* تكبير حجم النجوم */
+}
+
+.rating-stars .star-container {
+    display: flex;
+    align-items: center;
+}
+
+.rating-stars .star {
+    color: #ddd; /* اللون الرصاصي */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.rating-stars .star.selected,
+.rating-stars .star.hover,
+.rating-stars .star:hover {
+    color: #ffc107; /* اللون الذهبي عند التفاعل أو التحديد */
+}
+
+.rating-stars .star:active {
+    color: #ffc107; /* اللون الذهبي عند الضغط */
+}
+
+.star-number {
+    margin-left: 5px; /* المسافة بين النجمة والرقم */
+    font-size: 16px;
+    color: #333; /* لون الرقم */
+}
+
+
+
+    
+}
