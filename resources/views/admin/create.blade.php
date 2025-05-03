@@ -12,12 +12,12 @@
             <input type="text" name="username" class="form-control" required>
         </div>
         <div class="mb-3">
-            <label class="form-label">البريد الإلكتروني</label>
-            <input type="email" name="email" class="form-control" required>
+            <label class="form-label">البريد الإلكتروني</label> <!-- حقل البريد الإلكتروني -->
+            <input type="email" name="email" class="form-control" required> <!-- حقل البريد الإلكتروني -->
         </div>
         <div class="mb-3">
-            <label class="form-label">كلمة المرور</label>
-            <input type="password" name="password" class="form-control" required>
+            <label class="form-label">كلمة المرور</label>   <!-- حقل كلمة المرور -->
+            <input type="password" name="password" class="form-control" required>   <!-- حقل كلمة المرور -->
         </div>
         <div class="mb-3">
             <label class="form-label">اسم المشرف</label>
