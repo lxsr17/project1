@@ -1,0 +1,402 @@
+/* FAQ Page Styles */
+.faq-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+    background-color: #f8f9fa;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    font-size: 2rem;
+    color: rgb(0, 0, 0) ;
+    
+}
+
+.admin-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.admin-controls .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+}
+
+.admin-controls .btn img {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.faq-question:hover {
+    background: #f8f9fa;
+}
+
+.question-text {
+    font-weight: 500;
+    color: var(--text-color);
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.faq-toggle {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.faq-toggle img {
+    width: 16px;
+    height: 16px;
+    filter: invert(31%) sepia(93%) saturate(1352%) hue-rotate(194deg) brightness(91%) contrast(101%);
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    background: #f8f9fa;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-answer {
+    padding: 1.5rem;
+    max-height: 500px;
+}
+
+.faq-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.action-btn:hover {
+    opacity: 1;
+}
+
+.action-btn img {
+    width: 16px;
+    height: 16px;
+}
+
+.edit-btn img {
+    filter: invert(31%) sepia(93%) saturate(1352%) hue-rotate(194deg) brightness(91%) contrast(101%);
+}
+
+.delete-btn img {
+    filter: invert(29%) sepia(94%) saturate(2258%) hue-rotate(337deg) brightness(90%) contrast(101%);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--light-text);
+}
+
+.modal-title {
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 992px) {
+    .faq-page {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-page {
+        padding: 1rem;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .admin-controls {
+        width: 100%;
+    }
+
+    .admin-controls .btn {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
+
+
+/* ✅ الوضع الداكن لعناصر إضافية */
+body.dark-mode {
+    background-color: #121212;
+    color: var(--text-color);
+}
+
+/* عناصر إضافية */
+body.dark-mode .search-container,
+body.dark-mode .search-form,
+body.dark-mode .modal-content,
+body.dark-mode .stats-box,
+body.dark-mode .content-box,
+body.dark-mode .page-header {
+    background-color: var(--box-bg) !important;
+    border-color: #333 !important;
+    color: var(--text-color) !important;
+}
+
+/* الحقول */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* أزرار */
+body.dark-mode .btn,
+body.dark-mode button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+body.dark-mode .btn:hover,
+body.dark-mode button:hover {
+    background-color: #444;
+}
+
+/* روابط */
+body.dark-mode a {
+    color: var(--primary-color);
+}
+
+/* شريط جانبي */
+body.dark-mode .sidebar {
+    background-color: #1a1a1a;
+    border-right: 1px solid #333;
+}
+
+/* الشكل الافتراضي */
+.page-header {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+/* الوضع الداكن */
+body.dark-mode .page-header {
+    background: linear-gradient(to right, #003f66, #001f33);
+    color: white;
+}
+/* تنسيق افتراضي */
+.main-content {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* في الوضع الداكن */
+body.dark-mode .main-content {
+    background-color: #181818; /* داكن خفيف */
+    color: var(--text-color);  /* متغير عام */
+}
+/* الوضع العادي */
+.faq-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+    background-color: #f8f9fa;
+}
+
+/* الوضع الداكن */
+body.dark-mode .faq-page {
+    background-color: #181818;
+}
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* الوضع الداكن */
+body.dark-mode .faq-container {
+    background: #1e1e1e;
+    color: var(--text-color);
+    border: 1px solid #333;
+}
+
+/* ✅ الوضع الداكن */
+body.dark-mode .faq-list {
+    background: #1e1e1e;
+    border: 1px solid #333;
+}
+
+body.dark-mode .faq-item {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+}
+
+body.dark-mode .faq-question {
+    color: var(--text-color);
+}
+
+
+body.dark-mode .faq-answer {
+    color: var(--light-text);       /* يظل هادئًا وواضحًا */
+    background-color: #2a2a2a;      /* خلفية داكنة ناعمة */
+    border: 1px solid #444;
+}
+/* الوضع العادي */
+.faq-toggle img {
+    width: 16px;
+    height: 16px;
+    filter: invert(31%) sepia(93%) saturate(1352%) hue-rotate(194deg) brightness(91%) contrast(101%);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+/* الوضع الداكن */
+body.dark-mode .faq-toggle img {
+    filter: invert(100%) brightness(150%);
+}
+body.dark-mode {
+    --text-color: #f0f0f0;     /* لون أبيض مريح للقراءة */
+    --light-text: #ccc;        /* لون فرعي */
+}

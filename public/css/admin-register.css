@@ -1,0 +1,108 @@
+/* admin-register.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.register-container {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    direction: rtl;
+}
+
+.register-container h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #333;
+}
+
+.register-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #444;
+}
+
+.register-container input[type="text"],
+.register-container input[type="email"],
+.register-container input[type="password"],
+.register-container input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.register-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-container button:hover {
+    background-color: #0056b3;
+}
+
+.register-container .error {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+/* Dark Mode for Admin Register Page */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+.register-container.dark-mode {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.register-container.dark-mode h2 {
+    color: #f0f0f0;
+}
+
+.register-container.dark-mode label {
+    color: #ddd;
+}
+
+.register-container.dark-mode input[type="text"],
+.register-container.dark-mode input[type="email"],
+.register-container.dark-mode input[type="password"],
+.register-container.dark-mode input[type="tel"] {
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #555;
+}
+
+.register-container.dark-mode button {
+    background-color: #007bff;
+    color: white;
+}
+
+.register-container.dark-mode button:hover {
+    background-color: #0056b3;
+}
+
+.register-container.dark-mode .error {
+    color: #dc3545;
+}

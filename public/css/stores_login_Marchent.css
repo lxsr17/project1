@@ -1,0 +1,587 @@
+/* Stores Page Styles */
+.custom-pagination-arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.custom-pagination-arrows .arrow {
+    font-size: 1.5rem;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.custom-pagination-arrows .arrow:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+.custom-pagination-arrows .page-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+}
+.stores-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+    background-color: #f8f9fa;
+}
+
+.search-section {
+    margin-bottom: 2rem;
+}
+
+.stores-content {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+}
+
+/* Filters Sidebar */
+.filters-sidebar {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.filter-section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+
+
+
+
+.certificate-type {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.custom-radio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.6rem 1rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #fff;
+    font-weight: 500;
+    color: #333;
+}
+
+.custom-radio input[type="radio"] {
+    accent-color: #004aad; /* لون النجمة */
+    transform: scale(1.2);
+}
+
+.custom-radio:hover {
+    background-color: #f5f5f5;
+    border-color: #004aad;
+}
+
+.custom-radio.gold span {
+    color: #c29d0b;
+}
+
+.custom-radio.silver span {
+    color: #888;
+}
+
+
+.certificate-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.certificate-label.gold {
+    background-color: rgba(255, 215, 0, 0.1);
+    color: #000;
+}
+
+.certificate-label.silver {
+    background-color: rgba(192, 192, 192, 0.1);
+    color: #000;
+}
+
+.filter-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.filter-apply {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Stores List */
+.stores-list {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stores-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.stores-stats {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sort-options {
+    display: flex;
+    gap: 1rem;
+}
+
+.sort-link {
+    color: var(--light-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.sort-link:hover,
+.sort-link.active {
+    color: var(--primary-color);
+}
+
+.stores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.store-card {
+    display: flex;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.store-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.store-logo {
+    width: 80px;
+    height: 80px;
+    margin-left: 1rem;
+}
+
+.store-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.store-info {
+    flex: 1;
+}
+
+.store-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.store-category {
+    color: var(--light-text);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.store-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stars {
+    color: #ffd700;
+}
+
+.rating-count {
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.store-badge {
+    display: flex;
+    align-items: center;
+}
+
+.badge-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.page-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.page-btn:hover,
+.page-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.page-dots {
+    padding: 0.5rem;
+    color: var(--light-text);
+}
+
+@media (max-width: 1200px) {
+    .stores-content {
+        grid-template-columns: 1fr;
+    }
+
+    .filters-sidebar {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .stores-page {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .stores-page {
+        padding: 1rem;
+    }
+
+    .stores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stores-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .stores-stats {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--light-text);
+}
+
+.empty-state img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1.5rem;
+    opacity: 0.5;
+}
+
+.empty-state h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.empty-state p {
+    color: var(--light-text);
+}
+
+@media (max-width: 1200px) {
+    .stores-content {
+        grid-template-columns: 1fr;
+    }
+
+    .filters-sidebar {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .stores-page {
+        padding: 1rem;
+    }
+
+    .stores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stores-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .stores-stats {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+
+
+
+
+
+/* ✅ الوضع الداكن لعناصر إضافية */
+body.dark-mode {
+    background-color: #121212;
+    color: var(--text-color);
+}
+
+/* عناصر إضافية */
+body.dark-mode .search-container,
+body.dark-mode .search-form,
+body.dark-mode .modal-content,
+body.dark-mode .stats-box,
+body.dark-mode .content-box,
+body.dark-mode .page-header {
+    background-color: var(--box-bg) !important;
+    border-color: #333 !important;
+    color: var(--text-color) !important;
+}
+
+/* الحقول */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* أزرار */
+body.dark-mode .btn,
+body.dark-mode button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+body.dark-mode .btn:hover,
+body.dark-mode button:hover {
+    background-color: #444;
+}
+
+/* روابط */
+body.dark-mode a {
+    color: var(--primary-color);
+}
+
+/* شريط جانبي */
+body.dark-mode .sidebar {
+    background-color: #1a1a1a;
+    border-right: 1px solid #333;
+}
+
+/* الشكل الافتراضي */
+.page-header {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+/* الوضع الداكن */
+body.dark-mode .page-header {
+    background: linear-gradient(to right, #003f66, #001f33);
+    color: white;
+}
+/* تنسيق افتراضي */
+.main-content {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* في الوضع الداكن */
+body.dark-mode .main-content {
+    background-color: #181818; /* داكن خفيف */
+    color: var(--text-color);  /* متغير عام */
+}
+/* الوضع العادي */
+.stores-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+    background-color: #f8f9fa;
+}
+
+/* الوضع الداكن */
+body.dark-mode .stores-page {
+    background-color: #181818;
+}
+.stores-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* الوضع الداكن */
+body.dark-mode .stores-container {
+    background: #1e1e1e;
+    color: var(--text-color);
+    border: 1px solid #333;
+}
+body.dark-mode {
+    --text-color: #f0f0f0;     /* لون أبيض مريح للقراءة */
+    --light-text: #ccc;        /* لون فرعي */
+}
+
+/* 🌙 الوضع الداكن */
+body.dark-mode .filters-sidebar {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: var(--text-color);
+}
+
+body.dark-mode .filters-sidebar h3,
+body.dark-mode .filters-sidebar label {
+    color: var(--text-color);
+}
+
+
+body.dark-mode .stores-list {
+    background-color: #1e1e1e;
+    color: var(--text-color);
+    border: 1px solid #333;
+}
+
+body.dark-mode .custom-pagination-arrows .arrow {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: var(--text-color);
+}
+
+body.dark-mode .custom-pagination-arrows .arrow:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+body.dark-mode .store-card {
+    background-color: #2a2a2a;
+    color: var(--text-color);
+    border: 1px solid #444;
+}
+
+body.dark-mode .store-name {
+    color: var(--text-color);
+}
+
+body.dark-mode .store-category {
+    color: var(--light-text);
+}
+body.dark-mode .custom-pagination-arrows .arrow,
+body.dark-mode .custom-pagination-arrows .page-number {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #f0f0f0;
+}
+
+body.dark-mode .custom-pagination-arrows .arrow:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .custom-pagination-arrows .arrow.disabled {
+    background-color: #1e1e1e;
+    border-color: #444;
+    color: #888;
+}
+/* الوضع الداكن */
+body.dark-mode .custom-radio {
+    background-color: #2a2a2a; /* تغيير الخلفية في الوضع الداكن */
+    border-color: #555; /* تغيير اللون في الوضع الداكن */
+    color: #f0f0f0; /* تغيير النص في الوضع الداكن */
+}
+
+/* تفاعل الراديو */
+body.dark-mode .custom-radio input[type="radio"] {
+    accent-color: #004aad; /* لون النجمة */
+    transform: scale(1.2);
+}
+
+/* تأثير التمرير في الوضع الداكن */
+body.dark-mode .custom-radio:hover {
+    background-color: #444;
+    border-color: #004aad;
+}
+
+/* تخصيص الألوان الخاصة بالذهب والفضة في الوضع الداكن */
+body.dark-mode .custom-radio.gold span {
+    color: #ffc107;
+}
+
+body.dark-mode .custom-radio.silver span {
+    color: #ccc;
+}

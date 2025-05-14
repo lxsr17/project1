@@ -1,0 +1,53 @@
+.admin-header {
+    position: fixed;              /* 🔒 يجعل الهيدر ثابت */
+    top: 0;                       /* يثبته في الأعلى */
+    right: 0;                     /* لأن الصفحة RTL */
+    left: 0;
+    z-index: 1000;                /* فوق كل العناصر */
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-header .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.admin-name {
+    font-weight: bold;
+}
+
+.logout-button {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #c0392b;
+}

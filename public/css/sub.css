@@ -1,0 +1,329 @@
+.plans-container {
+    padding-top: 15rem;
+}
+body {
+    background-color: #f8f9fa;
+}
+
+.plans-wrapper {
+    padding: 4rem 2rem;
+}
+
+.plans-header {
+    background: linear-gradient(90deg, #50a8c0, #588fd3);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.plans-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.plans-description {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.plans-section {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    width: 300px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.plan-card h3 {
+    font-size: 1.5rem;
+    color: #0d6efd;
+}
+
+.plan-card .price {
+    font-size: 1.3rem;
+    color: #28a745;
+    margin: 1rem 0;
+}
+
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: right;
+    margin-bottom: 1.5rem;
+}
+
+.plan-card ul li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.plan-card .btn-plan {
+    padding: 0.75rem 1.5rem;
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.plan-card .btn-plan:hover {
+    background-color: #218838;
+}
+
+.plan-card .btn-plan.selected {
+    background-color: #0d6efd;
+}
+
+.plan-card .btn-plan.selected:hover {
+    background-color: #0056b3;
+}
+
+.plan-card .badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #0d6efd;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.selection-message {
+    margin-top: 1rem;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 1rem;
+}
+/* ✅ الوضع الداكن لعناصر إضافية */
+body.dark-mode {
+    background-color: #121212;
+    color: var(--text-color);
+}
+
+/* عناصر إضافية */
+body.dark-mode .search-container,
+body.dark-mode .search-form,
+body.dark-mode .modal-content,
+body.dark-mode .stats-box,
+body.dark-mode .content-box,
+body.dark-mode .page-header {
+    background-color: var(--box-bg) !important;
+    border-color: #333 !important;
+    color: var(--text-color) !important;
+}
+
+/* الحقول */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* أزرار */
+body.dark-mode .btn,
+body.dark-mode button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+body.dark-mode .btn:hover,
+body.dark-mode button:hover {
+    background-color: #444;
+}
+
+/* روابط */
+body.dark-mode a {
+    color: var(--primary-color);
+}
+
+/* شريط جانبي */
+body.dark-mode .sidebar {
+    background-color: #1a1a1a;
+    border-right: 1px solid #333;
+}
+
+/* الشكل الافتراضي */
+.page-header {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+/* الوضع الداكن */
+body.dark-mode .page-header {
+    background: linear-gradient(to right, #003f66, #001f33);
+    color: white;
+}
+/* تنسيق افتراضي */
+.main-content {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* في الوضع الداكن */
+body.dark-mode .main-content {
+    background-color: #181818; /* داكن خفيف */
+    color: var(--text-color);  /* متغير عام */
+}
+/* الوضع العادي */
+.sub-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+    background-color: #f8f9fa;
+}
+
+/* الوضع الداكن */
+body.dark-mode .sub-page {
+    background-color: #181818;
+}
+.sub-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* الوضع الداكن */
+body.dark-mode .sub-container {
+    background: #1e1e1e;
+    color: var(--text-color);
+    border: 1px solid #333;
+}
+body.dark-mode {
+    --text-color: #f0f0f0;     /* لون أبيض مريح للقراءة */
+    --light-text: #ccc;        /* لون فرعي */
+}
+/* ✅ الوضع الداكن */
+body.dark-mode .sub-page {
+    background-color: #121212;
+    color: var(--text-color);
+}
+
+body.dark-mode .page-title {
+    color: #f0f0f0;
+}
+
+body.dark-mode .empty-state {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: var(--text-color);
+}
+
+body.dark-mode .empty-state h2 {
+    color: #f0f0f0;
+}
+
+body.dark-mode .empty-state p {
+    color: var(--light-text);
+}
+
+body.dark-mode .empty-icon {
+    filter: brightness(0) invert(1) opacity(0.4);
+}
+
+body.dark-mode .btn {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #444;
+}
+/* الوضع الداكن للخلفية العامة */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* رأس الصفحة */
+body.dark-mode .plans-header {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: white;
+}
+
+/* بطاقات الخطط */
+body.dark-mode .plan-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #f0f0f0;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .plan-card ul li {
+    color: #ccc;
+}
+
+body.dark-mode .plan-card .btn-plan {
+    background-color: #28a745;
+    color: white;
+}
+
+body.dark-mode .plan-card .btn-plan:hover {
+    background-color: #218838;
+}
+
+body.dark-mode .plan-card .btn-plan.selected {
+    background-color: #0d6efd;
+}
+
+body.dark-mode .plan-card .btn-plan.selected:hover {
+    background-color: #0056b3;
+}
+
+body.dark-mode .plan-card .badge {
+    background-color: #0d6efd;
+    color: white;
+}
+
+/* رسالة تحديد الخطة */
+body.dark-mode .selection-message {
+    color: #5cd68b;
+}
+body.dark-mode .dashboard .box,
+body.dark-mode .dashboard .card,
+body.dark-mode .dashboard .content-box {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #f0f0f0;
+}
+body.dark-mode .dashboard {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+body.dark-mode .page-header {
+    background: linear-gradient(to right, #003f66, #001f33);
+    color: white;
+}

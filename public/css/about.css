@@ -1,0 +1,369 @@
+/* About Page Styles */
+.about-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+    background-color: #f8f9fa;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    font-size: 2rem;
+    color: white ;
+}
+
+.admin-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.admin-controls .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+}
+
+.admin-controls .btn img {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-section,
+.features-section,
+.benefits-section {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2,
+.features-section h2,
+.benefits-section h2 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.content-editable {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.content-editable p {
+    margin-bottom: 1rem;
+}
+
+.content-editable ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content-editable ul li {
+    position: relative;
+    padding-right: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content-editable ul li::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--light-text);
+}
+
+.modal-title {
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+}
+
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 992px) {
+    .about-page {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-page {
+        padding: 1rem;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .admin-controls {
+        width: 100%;
+    }
+
+    .admin-controls .btn {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
+
+/* ✅ الوضع الداكن لعناصر إضافية */
+body.dark-mode {
+    background-color: #121212;
+    color: var(--text-color);
+}
+
+/* عناصر إضافية */
+body.dark-mode .search-container,
+body.dark-mode .search-form,
+body.dark-mode .modal-content,
+body.dark-mode .stats-box,
+body.dark-mode .content-box,
+body.dark-mode .page-header {
+    background-color: var(--box-bg) !important;
+    border-color: #333 !important;
+    color: var(--text-color) !important;
+}
+
+/* الحقول */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* أزرار */
+body.dark-mode .btn,
+body.dark-mode button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+body.dark-mode .btn:hover,
+body.dark-mode button:hover {
+    background-color: #444;
+}
+
+/* روابط */
+body.dark-mode a {
+    color: var(--primary-color);
+}
+
+/* شريط جانبي */
+body.dark-mode .sidebar {
+    background-color: #1a1a1a;
+    border-right: 1px solid #333;
+}
+
+/* الشكل الافتراضي */
+.page-header {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+/* الوضع الداكن */
+body.dark-mode .page-header {
+    background: linear-gradient(to right, #003f66, #001f33);
+    color: white;
+}
+/* تنسيق افتراضي */
+.main-content {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* في الوضع الداكن */
+body.dark-mode .main-content {
+    background-color: #181818; /* داكن خفيف */
+    color: var(--text-color);  /* متغير عام */
+}
+/* الوضع العادي */
+.about-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+    background-color: #f8f9fa;
+}
+
+/* الوضع الداكن */
+body.dark-mode .about-page {
+    background-color: #181818;
+}
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* الوضع الداكن */
+body.dark-mode .about-container {
+    background: #1e1e1e;
+    color: var(--text-color);
+    border: 1px solid #333;
+}
+
+/* 🌙 الوضع الداكن */
+body.dark-mode .about-section {
+    background-color: #1e1e1e;
+    color: var(--text-color);
+    border: 1px solid #333;
+}
+
+body.dark-mode .about-section h2,
+body.dark-mode .about-section p {
+    color: var(--text-color);
+}
+
+/* 🌙 الوضع الداكن */
+body.dark-mode .features-section {
+    background-color: #1e1e1e;
+    color: var(--text-color);
+}
+
+body.dark-mode .feature-item {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+}
+
+body.dark-mode .feature-title,
+body.dark-mode .features-title {
+    color: var(--text-color);
+}
+
+body.dark-mode .feature-description {
+    color: var(--light-text);
+}
+
+/* 🌙 الوضع الداكن */
+body.dark-mode .benefits-section {
+    background-color: #1e1e1e;
+    color: var(--text-color);
+}
+
+body.dark-mode .benefit-item {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+}
+
+body.dark-mode .benefits-title,
+body.dark-mode .benefit-title {
+    color: var(--text-color);
+}
+
+body.dark-mode .benefit-description {
+    color: var(--light-text);
+}
+body.dark-mode {
+    --text-color: #f0f0f0;     /* لون أبيض مريح للقراءة */
+    --light-text: #ccc;        /* لون فرعي */
+}

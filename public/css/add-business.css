@@ -1,0 +1,622 @@
+/* Add Business Form Styles */
+.add-business-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+    background-color: #f8f9fa;
+}
+
+.steps-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+/* Progress Steps */
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.progress-steps::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #eee;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.step {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--light-text);
+}
+
+.step-number {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.step.active {
+    color: var(--primary-color);
+}
+
+.step.active .step-number {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.step.completed .step-number {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+
+/* Form Content */
+.form-content {
+    margin-top: 2rem;
+}
+
+.form-section {
+    margin-bottom: 2rem;
+}
+
+.form-section-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.form-section-title img {
+    width: 24px;
+    height: 24px;
+    filter: invert(31%) sepia(93%) saturate(1352%) hue-rotate(194deg) brightness(91%) contrast(101%);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Link Options */
+.link-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.link-option {
+    border: 2px solid #eee;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.link-option:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.link-option.selected {
+    border-color: var(--primary-color);
+    background: rgba(0, 102, 204, 0.05);
+}
+
+.link-option img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    filter: invert(31%) sepia(93%) saturate(1352%) hue-rotate(194deg) brightness(91%) contrast(101%);
+}
+
+.link-option h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.link-option p {
+    font-size: 0.9rem;
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+/* Upload Section Styles */
+.upload-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+.upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    border: 2px dashed var(--primary-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.upload-label:hover {
+    background: rgba(0, 102, 204, 0.05);
+}
+
+.upload-label img {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+}
+
+.upload-label span {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.file-name {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.remove-file {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+}
+
+.remove-file:hover {
+    color: #bd2130;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.btn-cancel {
+    padding: 0.75rem 2rem;
+    border: 2px solid #eee;
+    border-radius: 25px;
+    background: white;
+    color: var(--light-text);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-cancel:hover {
+    border-color: #ddd;
+    color: var(--text-color);
+}
+
+.btn-next {
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    background: var(--gradient);
+    color: white;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.btn-next:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+    .add-business-page {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .add-business-page {
+        margin-right: 0;
+        padding: 1rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .link-options {
+        grid-template-columns: 1fr;
+    }
+
+    .progress-steps {
+        font-size: 0.9rem;
+    }
+
+    .step-text {
+        display: none;
+    }
+}
+.logo-upload-wrapper .logo-input-preview {
+    position: relative;
+    width: 100%;
+    height: 140px;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-upload-wrapper input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.logo-upload-wrapper #logoPreview {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+    z-index: 1;
+    display: block;
+}
+
+
+
+
+/* ✅ الوضع الداكن لعناصر إضافية */
+body.dark-mode {
+    background-color: #121212;
+    color: var(--text-color);
+}
+
+/* عناصر إضافية */
+body.dark-mode .search-container,
+body.dark-mode .search-form,
+body.dark-mode .modal-content,
+body.dark-mode .stats-box,
+body.dark-mode .content-box,
+body.dark-mode .page-header {
+    background-color: var(--box-bg) !important;
+    border-color: #333 !important;
+    color: var(--text-color) !important;
+}
+
+/* الحقول */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* أزرار */
+body.dark-mode .btn,
+body.dark-mode button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+body.dark-mode .btn:hover,
+body.dark-mode button:hover {
+    background-color: #444;
+}
+
+/* روابط */
+body.dark-mode a {
+    color: var(--primary-color);
+}
+
+/* شريط جانبي */
+body.dark-mode .sidebar {
+    background-color: #1a1a1a;
+    border-right: 1px solid #333;
+}
+
+/* الشكل الافتراضي */
+.page-header {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+/* الوضع الداكن */
+body.dark-mode .page-header {
+    background: linear-gradient(to right, #003f66, #001f33);
+    color: white;
+}
+/* تنسيق افتراضي */
+.main-content {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* في الوضع الداكن */
+body.dark-mode .main-content {
+    background-color: #181818; /* داكن خفيف */
+    color: var(--text-color);  /* متغير عام */
+}
+/* الوضع العادي */
+.add-business-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+    background-color: #f8f9fa;
+}
+
+/* الوضع الداكن */
+body.dark-mode .add-business-page {
+    background-color: #181818;
+}
+.add-business-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* الوضع الداكن */
+body.dark-mode .add-business-container {
+    background: #1e1e1e;
+    color: var(--text-color);
+    border: 1px solid #333;
+}
+body.dark-mode {
+    --text-color: #f0f0f0;     /* لون أبيض مريح للقراءة */
+    --light-text: #ccc;        /* لون فرعي */
+}
+/* ✅ الوضع الداكن */
+body.dark-mode .add-business-page {
+    background-color: #121212;
+    color: var(--text-color);
+}
+
+body.dark-mode .page-title {
+    color: #f0f0f0;
+}
+
+body.dark-mode .empty-state {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: var(--text-color);
+}
+
+body.dark-mode .empty-state h2 {
+    color: #f0f0f0;
+}
+
+body.dark-mode .empty-state p {
+    color: var(--light-text);
+}
+
+body.dark-mode .empty-icon {
+    filter: brightness(0) invert(1) opacity(0.4);
+}
+
+body.dark-mode .btn {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #444;
+}
+/* ✅ الوضع الداكن لصفحة إضافة المتجر */
+body.dark-mode .add-business-page {
+    background-color: #181818;
+}
+
+body.dark-mode .steps-container,
+body.dark-mode .form-group input,
+body.dark-mode .form-group select,
+body.dark-mode .form-group textarea,
+body.dark-mode .link-option,
+body.dark-mode .file-info,
+body.dark-mode .modal-content {
+    background-color: #1e1e1e;
+    color: var(--text-color);
+    border-color: #333;
+}
+
+body.dark-mode .form-group label,
+body.dark-mode .form-section-title,
+body.dark-mode .file-name,
+body.dark-mode .link-option h4 {
+    color: var(--text-color);
+}
+
+body.dark-mode .link-option p {
+    color: var(--light-text);
+}
+
+body.dark-mode .upload-label {
+    background-color: #2a2a2a;
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .upload-label:hover {
+    background-color: rgba(0, 102, 204, 0.1);
+}
+
+body.dark-mode .btn-cancel {
+    background-color: #1e1e1e;
+    border-color: #444;
+    color: var(--light-text);
+}
+
+body.dark-mode .btn-cancel:hover {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+body.dark-mode .step-number {
+    background-color: #2a2a2a;
+    border-color: #444;
+    color: #ccc;
+}
+
+body.dark-mode .step.active .step-number,
+body.dark-mode .step.completed .step-number {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+/* ✅ الوضع الداكن لعنصر شعار المتجر */
+body.dark-mode .logo-upload-wrapper .logo-input-preview {
+    background-color: #2a2a2a;
+    border-color: #444;
+}
+/* ✅ تحسين معاينة الشعار في الوضع الداكن */
+body.dark-mode .logo-upload-wrapper #logoPreview {
+    background-color: #1e1e1e;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+/* ✅ دعم الوضع الداكن لـ form-section */
+body.dark-mode .form-section {
+    background-color: #1e1e1e;
+}
+
+/* ✅ دعم الوضع الداكن لـ form-section-title */
+body.dark-mode .form-section-title {
+    color: var(--text-color);
+}
+
+/* لو كان فيها صورة أيقونة */
+body.dark-mode .form-section-title img {
+    filter: invert(1);
+}
+
+/* الوضع الداكن */
+body.dark-mode .social-input-group {
+    background-color: #2a2a2a;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+/* تنسيق النصوص والعناصر داخل المجموعة */
+body.dark-mode .social-input-group input,
+body.dark-mode .social-input-group select {
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+/* الوضع الداكن */
+body.dark-mode .review-section {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+}
+
+body.dark-mode .section-header {
+    color: #fff;
+}
+
+body.dark-mode .section-content {
+    color: #ccc;
+}
+
+/* الوضع الداكن */
+body.dark-mode .edit-btn {
+    background-color: #0056b3;
+    color: #fff;
+}

@@ -1,0 +1,306 @@
+/* Admin Dashboard Styles */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+    color: var(--light-text);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-details {
+    display: flex;
+    gap: 1rem;
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.pending {
+    color: #dc3545;
+}
+
+/* Pending Approvals Section */
+.pending-approvals {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+.approvals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Approval Table */
+.table {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: right;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #f8f9fa;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+td {
+    color: var(--text-color);
+}
+
+/* Buttons */
+.actions .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 8px;
+    margin-left: 6px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+
+.btn-gray {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-gray:hover,
+.btn-success:hover,
+.btn-danger:hover {
+    opacity: 0.9;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+/* License Modal */
+.license-content {
+    margin: 2rem 0;
+}
+
+.license-info {
+    margin-bottom: 1.5rem;
+}
+
+.license-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.license-file {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.license-file img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: var(--light-text);
+}
+
+@media (max-width: 768px) {
+    .table th,
+    .table td {
+        font-size: 13px;
+        padding: 0.5rem;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .actions .btn {
+        width: 100%;
+    }
+
+    
+}
+/* Dark Mode for Admin Dashboard */
+body.dark-mode .stats-grid {
+    background-color: #2a2a2a;  /* Dark background */
+}
+
+body.dark-mode .stat-card {
+    background: #1e1e1e;  /* Darker card background */
+    color: #f0f0f0;        /* Light text */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+
+body.dark-mode .stat-value {
+    color: var(--primary-color);  /* Primary color for stat values */
+}
+
+body.dark-mode .stat-details {
+    color: #ccc;  /* Light text for details */
+}
+
+body.dark-mode .pending {
+    color: #dc3545;  /* Red for pending items */
+}
+
+body.dark-mode .pending-approvals {
+    background: #2a2a2a;  /* Dark background for approvals section */
+    color: #f0f0f0;       /* Light text */
+}
+
+body.dark-mode .section-header h2 {
+    color: #f0f0f0;  /* Light text color for section titles */
+}
+
+body.dark-mode .table {
+    background: #1e1e1e;  /* Dark table background */
+}
+
+body.dark-mode table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #f0f0f0;  /* Light text */
+}
+
+body.dark-mode th, body.dark-mode td {
+    padding: 1rem;
+    text-align: right;
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode th {
+    background: #333;  /* Dark header background */
+    color: #f0f0f0;    /* Light header text */
+}
+
+body.dark-mode td {
+    color: #ccc;  /* Light text for table rows */
+}
+
+body.dark-mode .btn-gray {
+    background-color: #555;  /* Darker gray for inactive button */
+    color: white;
+}
+
+body.dark-mode .btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+body.dark-mode .btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+body.dark-mode .btn-gray:hover,
+body.dark-mode .btn-success:hover,
+body.dark-mode .btn-danger:hover {
+    opacity: 0.9;
+}
+
+body.dark-mode .actions .btn {
+    background: #333;  /* Darker background for buttons */
+}
+
+body.dark-mode .license-content {
+    background-color: #2a2a2a;  /* Dark background for modal */
+    color: #f0f0f0;
+}
+
+body.dark-mode .license-file {
+    background: #333;  /* Dark background for license file section */
+    color: #f0f0f0;
+}
+
+body.dark-mode .license-file img {
+    border: 1px solid #444;
+}
+
+body.dark-mode .empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: #aaa;  /* Lighter text for empty state */
+}
+
+@media (max-width: 768px) {
+    body.dark-mode .table th,
+    body.dark-mode .table td {
+        font-size: 13px;
+        padding: 0.5rem;
+    }
+
+    body.dark-mode .actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    body.dark-mode .actions .btn {
+        width: 100%;
+    }
+}

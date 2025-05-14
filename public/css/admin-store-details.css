@@ -1,0 +1,201 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 2rem;
+    direction: rtl;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+.section {
+    margin-bottom: 2.5rem;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 1.5rem;
+}
+
+.section h2 {
+    font-size: 1.25rem;
+    color: #444;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e2e2e2;
+    padding-bottom: 0.5rem;
+}
+
+.field {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.label {
+    font-weight: 600;
+    color: #555;
+    min-width: 200px;
+}
+
+.value {
+    text-align: left;
+    color: #111;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.preview-img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    margin-top: 0.5rem;
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.file-link {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.back-btn {
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #5a6268;
+}
+
+.text-muted {
+    color: #999;
+}
+
+.image-preview {
+    max-width: 400px;
+    max-height: 400px;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.preview-img {
+    max-width: 200px;
+    max-height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.file-preview {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 2rem;
+    direction: rtl;
+}
+
+.container.dark-mode {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1.dark-mode {
+    color: #f0f0f0;
+}
+
+.section.dark-mode {
+    margin-bottom: 2.5rem;
+    border-top: 1px solid #444;
+}
+
+.section.dark-mode h2 {
+    color: #f0f0f0;
+    border-bottom: 2px solid #444;
+}
+btn btn-dark open-notification-modal
+.field.dark-mode {
+    border-bottom: 1px solid #333;
+}
+
+.label.dark-mode {
+    color: #bbb;
+}
+
+.value.dark-mode {
+    color: #f0f0f0;
+}
+
+.preview-img.dark-mode {
+    border: 1px solid #444;
+}
+
+iframe.dark-mode {
+    border: 1px solid #444;
+}
+btn btn-danger
+.file-link.dark-mode {
+    color: #66aaff;
+}
+
+.back-btn.dark-mode {
+    background-color: #444;
+    color: white;
+}
+
+.back-btn.dark-mode:hover {
+    background-color: #555;
+}
+
+.text-muted.dark-mode {
+    color: #666;
+}
+
+.image-preview.dark-mode {
+    border: 1px solid #444;
+}
+
+.preview-img.dark-mode {
+    border: 1px solid #444;
+}
+
+.file-preview.dark-mode {
+    border: 1px solid #444;
+}

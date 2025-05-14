@@ -1,0 +1,258 @@
+:root {
+    --box-bg: rgb(221, 221, 221);
+    --card-bg: #fff;
+    --star-color: #ffd700;
+    --info-color: #000;
+    --text-color: #222;
+    --light-text: #666;
+    --primary-color: #0066cc;
+}
+
+body.dark-mode {
+    --box-bg: #1e1e1e;
+    --card-bg: #2a2a2a;
+    --star-color: #ffcc00;
+    --info-color: #ccc;
+    --text-color: #f0f0f0;
+    --light-text: #aaa;
+    --primary-color: #80b3ff;
+    background-color: #121212;
+    color: var(--text-color);
+}
+
+/* أقسام عامة */
+.search-section,
+.recent-reviews,
+.top-stores {
+    background: var(--box-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* العناوين */
+.recent-reviews h2,
+.top-stores h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+/* شبكة العناصر */
+.reviews-grid,
+.stores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* بطاقات */
+.review-card,
+.store-card {
+    background: var(--box-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+.review-card:hover,
+.store-card:hover {
+    transform: translateY(-4px);
+}
+
+/* تقييم */
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.review-store {
+    font-weight: 500;
+    color: var(--text-color);
+}
+.review-date {
+    font-size: 0.9rem;
+    color: var(--light-text);
+}
+.review-rating {
+    color: var(--star-color);
+    margin-bottom: 0.5rem;
+}
+.review-comment {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+.review-user {
+    margin-top: 1rem;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* حالة فارغة */
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: var(--light-text);
+    background: var(--box-bg);
+    border-radius: 8px;
+}
+
+/* بطاقة متجر */
+.store-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.store-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.store-name {
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+.store-category {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: var(--light-text);
+}
+.store-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.store-rating .stars {
+    color: var(--star-color);
+}
+.store-rating .count {
+    font-size: 0.9rem;
+    color: var(--light-text);
+}
+
+/* تقييم متقدم */
+.review-box {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+.review-box:hover {
+    transform: translateY(-4px);
+}
+.review-box .store-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+.review-box .review-comment {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+.review-box .review-rating {
+    color: var(--star-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.review-box .review-meta {
+    font-size: 0.85rem;
+    color: var(--light-text);
+    margin-top: auto;
+    text-align: left;
+}
+
+/* استجابة */
+@media (max-width: 992px) {
+    .reviews-grid,
+    .stores-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .search-section,
+    .recent-reviews,
+    .top-stores {
+        padding: 1.5rem;
+    }
+}
+
+/* الوضع الداكن لعناصر إضافية */
+body.dark-mode .search-container,
+body.dark-mode .search-form,
+body.dark-mode .modal-content,
+body.dark-mode .stats-box,
+body.dark-mode .content-box,
+body.dark-mode .page-header {
+    background-color: var(--box-bg) !important;
+    border-color: #333 !important;
+    color: var(--text-color) !important;
+}
+
+/* الحقول */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* أزرار */
+body.dark-mode .btn,
+body.dark-mode button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+body.dark-mode .btn:hover,
+body.dark-mode button:hover {
+    background-color: #444;
+}
+
+/* روابط */
+body.dark-mode a {
+    color: var(--primary-color);
+}
+
+/* شريط جانبي */
+body.dark-mode .sidebar {
+    background-color: #1a1a1a;
+    border-right: 1px solid #333;
+}
+
+/* رأس الصفحة */
+.page-header {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+body.dark-mode .page-header {
+    background: linear-gradient(to right, #003f66, #001f33);
+    color: white;
+}
+
+/* منطقة المحتوى */
+.main-content {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+body.dark-mode .main-content {
+    background-color: #181818;
+    color: var(--text-color);
+}

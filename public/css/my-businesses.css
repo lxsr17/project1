@@ -1,0 +1,566 @@
+/* My Businesses Page Styles */
+.businesses-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+    background-color: #f8f9fa;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    font-size: 2rem;
+      color: rgb(255, 255, 255);
+}
+
+.add-business-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.add-business-btn:hover {
+    background: var(--gradient);
+    color: white;
+    border-color: transparent;
+}
+
+.add-business-btn img {
+    width: 20px;
+    height: 20px;
+    filter: invert(31%) sepia(93%) saturate(1352%) hue-rotate(194deg) brightness(91%) contrast(101%);
+}
+
+.add-business-btn:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.results-count {
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+}
+
+/* Empty state styles */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.empty-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 2rem;
+    filter: invert(31%) sepia(93%) saturate(1352%) hue-rotate(194deg) brightness(91%) contrast(101%);
+    opacity: 0.5;
+}
+
+.empty-state h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.empty-state p {
+    color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+.empty-state .btn {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Business card styles */
+.business-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.business-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.business-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.business-info {
+    flex: 1;
+}
+
+.business-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.business-name {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.business-category {
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.business-status {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    background: #f8f9fa;
+    color: var(--light-text);
+}
+
+.business-status.incomplete {
+    background: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+.business-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.stars {
+    color: #ffd700;
+}
+
+.rating-count {
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.business-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    background: none;
+}
+
+.action-btn img {
+    width: 16px;
+    height: 16px;
+}
+
+.edit-btn {
+    color: var(--primary-color);
+}
+
+.edit-btn img {
+    filter: invert(31%) sepia(93%) saturate(1352%) hue-rotate(194deg) brightness(91%) contrast(101%);
+}
+
+.share-btn {
+    color: #00aa95;
+}
+
+.share-btn img {
+    filter: invert(48%) sepia(96%) saturate(385%) hue-rotate(127deg) brightness(89%) contrast(101%);
+}
+
+.delete-btn {
+    color: #dc3545;
+}
+
+.delete-btn img {
+    filter: invert(29%) sepia(94%) saturate(2258%) hue-rotate(337deg) brightness(90%) contrast(101%);
+}
+
+.action-btn:hover {
+    background: #f8f9fa;
+}
+
+@media (max-width: 992px) {
+    .businesses-page {
+        margin-right: 0;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .business-card {
+        flex-direction: column;
+    }
+
+    .business-logo {
+        width: 100%;
+        height: 200px;
+    }
+
+    .business-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .business-status {
+        align-self: flex-start;
+    }
+
+    .business-actions {
+        flex-wrap: wrap;
+    }
+
+    .action-btn {
+        flex: 1;
+        justify-content: center;
+    }
+
+}
+.business-status.draft     { color: #c0392b; } /* أحمر */
+.business-status.pending   { color: #f39c12; } /* برتقالي */
+.business-status.approved  { color: #27ae60; } /* أخضر */
+.business-status.rejected  { color: #8e44ad; } /* بنفسجي */
+
+/* Modal Container */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* When active */
+.modal.active {
+    display: flex;
+}
+
+/* Modal Content */
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* Modal Close Button (X) */
+.modal-close {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+}
+
+/* Text inside modal */
+.modal-content p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Modal Buttons */
+.modal-content button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#cancelModalBtn {
+    background: #e0e0e0;
+    color: #333;
+}
+
+#cancelModalBtn:hover {
+    background: #cacaca;
+}
+
+#confirmModalBtn {
+    background: #dc3545;
+    color: white;
+}
+
+#confirmModalBtn:hover {
+    background: #c82333;
+}
+
+.business-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.business-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.business-logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.business-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.business-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.business-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.store-category {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 4px;
+}
+
+.business-status {
+    font-size: 0.9rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.business-status.pending {
+    background-color: #fdf5e6;
+    color: #f0ad4e;
+}
+
+.business-status.approved {
+    background-color: #e8f5e9;
+    color: #4caf50;
+}
+
+.business-status.rejected {
+    background-color: #fdecea;
+    color: #f44336;
+}
+
+.business-status.draft {
+    background-color: #f0f0f0;
+    color: #777;
+}
+
+.store-rating {
+    font-size: 0.9rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.stars {
+    color: gold;
+    font-size: 1rem;
+}
+
+.business-actions {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border: none;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+}
+
+.edit-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.share-btn {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* الصفحة والخلفية */
+body.dark-mode .businesses-page {
+    background-color: #181818;
+}
+
+body.dark-mode .business-card {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border: 1px solid #333;
+}
+
+body.dark-mode .business-logo img {
+    border: 1px solid #444;
+}
+
+body.dark-mode .business-name,
+body.dark-mode .store-category,
+body.dark-mode .business-status,
+body.dark-mode .store-rating {
+    color: #f0f0f0;
+}
+
+body.dark-mode .stars {
+    color: #ffd700;
+}
+
+/* زر إضافة عمل */
+body.dark-mode .add-business-btn {
+    background-color: transparent;
+    border-color: #80b3ff;
+    color: #80b3ff;
+}
+
+body.dark-mode .add-business-btn:hover {
+    background: var(--gradient);
+    color: white;
+}
+
+/* أيقونات الإجراءات */
+body.dark-mode .edit-btn {
+    background-color: #1565c0;
+}
+
+body.dark-mode .share-btn {
+    background-color: #0097a7;
+}
+
+body.dark-mode .delete-btn {
+    background-color: #c62828;
+}
+
+/* الرسالة الفارغة */
+body.dark-mode .empty-state {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #aaa;
+}
+
+/* نافذة التأكيد */
+body.dark-mode .modal-content {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    color: #f0f0f0;
+}
+
+body.dark-mode .modal-content button {
+    border: none;
+}
+
+body.dark-mode #cancelModalBtn {
+    background-color: #444;
+    color: #ccc;
+}
+
+body.dark-mode #confirmModalBtn {
+    background-color: #c62828;
+}
+body.dark-mode .page-header {
+    background: linear-gradient(to right, #003f66, #001f33);
+    color: white;
+}
+body.dark-mode .sidebar {
+    background-color: #1a1a1a;
+    border-right: 1px solid #333;
+}
+/* ✅ الوضع الداكن لحالات المتجر */
+body.dark-mode .business-status.approved {
+    background-color: #1e3a2c;  /* أخضر داكن */
+    color: #66ff99;             /* أخضر فاتح */
+}
+
+body.dark-mode .business-status.pending {
+    background-color: #3a2e1e;  /* برتقالي داكن */
+    color: #f0b84c;             /* برتقالي فاتح */
+}
+
+body.dark-mode .business-status.rejected {
+    background-color: #3a1e1e;  /* أحمر داكن */
+    color: #ff6666;             /* أحمر فاتح */
+}
+
+body.dark-mode .business-status.draft {
+    background-color: #2a2a2a;  /* رمادي غامق */
+    color: #ccc;                /* رمادي فاتح */
+}

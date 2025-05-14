@@ -1,0 +1,161 @@
+:root {
+    --sidebar-width: 280px;
+    --text-color: #222;
+    --light-text: #666;
+    --primary-color: #0066cc;
+}
+
+/* الوضع الداكن: إعادة تعريف المتغيرات */
+body.dark-mode {
+    --text-color: #f0f0f0;
+    --light-text: #ccc;
+}
+
+/* الصفحة العامة */
+.subscriptions-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    margin-top: 72px;
+    min-height: calc(100vh - 72px);
+    background-color: #f8f9fa;
+}
+
+body.dark-mode .subscriptions-page {
+    background-color: #121212;
+    color: var(--text-color);
+}
+
+/* الحاوية */
+.subscriptions-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .subscriptions-container {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    color: var(--text-color);
+}
+
+/* رأس الصفحة */
+.page-header {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+body.dark-mode .page-header {
+    background: linear-gradient(to right, #003f66, #001f33);
+    color: white;
+}
+
+.page-title {
+    font-size: 2rem;
+    color: white;
+}
+
+body.dark-mode .page-title {
+    color: #f0f0f0;
+}
+
+/* الحالة الفارغة */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.empty-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 2rem;
+    filter: invert(31%) sepia(93%) saturate(1352%) hue-rotate(194deg) brightness(91%) contrast(101%);
+    opacity: 0.5;
+}
+
+.empty-state h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.empty-state p {
+    color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+.empty-state .btn {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+}
+
+body.dark-mode .empty-state {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: var(--text-color);
+}
+
+body.dark-mode .empty-state h2 {
+    color: var(--text-color);
+}
+
+body.dark-mode .empty-state p {
+    color: var(--light-text);
+}
+
+body.dark-mode .empty-icon {
+    filter: brightness(0) invert(1) opacity(0.4);
+}
+
+/* الأزرار */
+.btn {
+    background-color: #eee;
+    color: var(--text-color);
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .btn,
+body.dark-mode button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+
+body.dark-mode .btn:hover,
+body.dark-mode button:hover {
+    background-color: #444;
+}
+
+/* المحتوى الرئيسي */
+.main-content {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+body.dark-mode .main-content {
+    background-color: #181818;
+}
+
+/* استجابة */
+@media (max-width: 992px) {
+    .subscriptions-page {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .subscriptions-page {
+        padding: 1rem;
+    }
+}

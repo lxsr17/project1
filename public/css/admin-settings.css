@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #dfdfdf;
+    color: #e4e4e4;
+    font-family: 'Tajawal', sans-serif;
+  }
+  
+  /* حاوية محتوى الصفحة */
+  .page-content {
+    display: flex;
+  }
+  
+  /* الشريط الجانبي */
+  .sidebar {
+    width: 280px;
+    background-color: #1f222a;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* محتوى الإعدادات */
+  .settings-container {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* تعديل تبويبات الإعدادات */
+  .nav-tabs .nav-link {
+    background-color: transparent;
+    color: #ccc;
+    border: none;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .nav-tabs .nav-link.active {
+    color: #fff;
+    background-color: #0d6efd;
+    border-bottom: 2px solid #0d6efd;
+  }
+  
+  /* خلفية النماذج */
+  form {
+    background-color: #2a2d37;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* الحقول */
+  form input,
+  form select {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  /* الأزرار */
+  form button {
+    width: 160px;
+  }
+  

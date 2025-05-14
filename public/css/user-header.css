@@ -1,0 +1,227 @@
+:root {
+    --primary-color: #0066cc;
+    --light-text: #666;
+    --text-color: #222;
+}
+
+/* Header */
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    height: 72px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.user-info-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: 0.3s;
+    background: rgba(0, 102, 204, 0.05);
+}
+
+.user-info-container:hover {
+    background: rgba(0, 102, 204, 0.1);
+}
+
+.user-name {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.user-email {
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.dropdown-arrow {
+    width: 12px;
+    height: 12px;
+    filter: invert(31%) sepia(93%) saturate(1352%) hue-rotate(194deg) brightness(91%) contrast(101%);
+    transition: transform 0.3s;
+}
+
+.user-info-container:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.notifications-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+}
+
+.notifications-icon img {
+    width: 100%;
+    height: 100%;
+    filter: invert(31%) sepia(93%) saturate(1352%) hue-rotate(194deg) brightness(91%) contrast(101%);
+}
+
+.notifications-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8px;
+    height: 8px;
+    background: #dc3545;
+    border-radius: 50%;
+}
+
+/* Dropdown */
+.user-dropdown {
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    left: 0;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    min-width: 240px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.user-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 12px;
+    margin-bottom: 0.25rem;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(0, 102, 204, 0.05);
+    transform: translateX(-2px);
+}
+
+.dropdown-item img {
+    width: 18px;
+    height: 18px;
+    filter: invert(31%) sepia(93%) saturate(1352%) hue-rotate(194deg) brightness(91%) contrast(101%);
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.dropdown-item:hover img {
+    opacity: 1;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: rgba(0, 0, 0, 0.06);
+    margin: 0.5rem 0;
+}
+
+.dropdown-item.danger {
+    color: #dc3545;
+}
+
+.dropdown-item.danger:hover {
+    background-color: rgba(220, 53, 69, 0.05);
+}
+
+.dropdown-item.danger img {
+    filter: invert(29%) sepia(94%) saturate(2258%) hue-rotate(337deg) brightness(90%) contrast(101%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .user-header {
+        padding: 1rem;
+    }
+
+    .user-controls {
+        gap: 1rem;
+    }
+
+    .user-info-container {
+        padding: 0.5rem;
+    }
+
+    .user-email {
+        display: none;
+    }
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-mode .user-header {
+    background: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode .user-dropdown {
+    background: #2a2a2a;
+    border: 1px solid #444;
+}
+
+body.dark-mode .dropdown-item {
+    color: #e0e0e0;
+}
+
+body.dark-mode .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .dropdown-item img {
+    filter: invert(100%);
+}
+
+body.dark-mode .dropdown-divider {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: inherit;
+}
+#theme-switch img {
+    width: 24px; /* حجم الأيقونة */
+    height: 24px; /* حجم الأيقونة */
+    border: none !important;
+    outline: none !important;
+}

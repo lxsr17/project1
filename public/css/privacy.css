@@ -1,0 +1,292 @@
+/* Privacy Policy Page Styles */
+.privacy-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+    background-color: #f8f9fa;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    font-size: 2rem;
+    color: white ;
+}
+
+.privacy-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-section {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.section-content {
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.section-content p {
+    margin-bottom: 1rem;
+}
+
+.section-content ol {
+    padding-right: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-content ol li {
+    margin-bottom: 1rem;
+}
+
+.section-content ol ol {
+    list-style-type: lower-alpha;
+    margin: 1rem 0;
+}
+
+.section-content ol ol li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 992px) {
+    .privacy-page {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .privacy-page {
+        padding: 1rem;
+    }
+
+    .privacy-container {
+        padding: 1.5rem;
+    }
+}
+/* Terms of Use Page Styles */
+.terms-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+    background-color: #f8f9fa;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+    
+}
+
+.page-title {
+    font-size: 2rem;
+    color: rgb(255, 255, 255) ;
+}
+
+.terms-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.terms-intro {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.terms-section {
+    margin-bottom: 2.5rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.section-content {
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.section-content p {
+    margin-bottom: 1rem;
+}
+
+.section-content ol {
+    padding-right: 1.5rem;
+    margin-bottom: 1rem;
+    counter-reset: item;
+}
+
+.section-content ol > li {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-content ol ol {
+    margin: 1rem 0;
+    padding-right: 2rem;
+}
+
+.section-content ol ol > li {
+    margin-bottom: 0.5rem;
+}
+
+.definition-list dt {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.definition-list dd {
+    margin-bottom: 1.5rem;
+    padding-right: 1rem;
+    color: var(--light-text);
+}
+
+@media (max-width: 992px) {
+    .terms-page {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .terms-page {
+        padding: 1rem;
+    }
+
+    .terms-container {
+        padding: 1.5rem;
+    }
+}
+/* 
+
+/* ✅ الوضع الداكن لعناصر إضافية */
+body.dark-mode {
+    background-color: #121212;
+    color: var(--text-color);
+}
+
+/* عناصر إضافية */
+body.dark-mode .search-container,
+body.dark-mode .search-form,
+body.dark-mode .modal-content,
+body.dark-mode .stats-box,
+body.dark-mode .content-box,
+body.dark-mode .page-header {
+    background-color: var(--box-bg) !important;
+    border-color: #333 !important;
+    color: var(--text-color) !important;
+}
+
+/* الحقول */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* أزرار */
+body.dark-mode .btn,
+body.dark-mode button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+body.dark-mode .btn:hover,
+body.dark-mode button:hover {
+    background-color: #444;
+}
+
+/* روابط */
+body.dark-mode a {
+    color: var(--primary-color);
+}
+
+/* شريط جانبي */
+body.dark-mode .sidebar {
+    background-color: #1a1a1a;
+    border-right: 1px solid #333;
+}
+
+/* الشكل الافتراضي */
+.page-header {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+/* الوضع الداكن */
+body.dark-mode .page-header {
+    background: linear-gradient(to right, #003f66, #001f33);
+    color: white;
+}
+/* تنسيق افتراضي */
+.main-content {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* في الوضع الداكن */
+body.dark-mode .main-content {
+    background-color: #181818; /* داكن خفيف */
+    color: var(--text-color);  /* متغير عام */
+}
+/* الوضع العادي */
+.privacy-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+    background-color: #f8f9fa;
+}
+
+/* الوضع الداكن */
+body.dark-mode .privacy-page {
+    background-color: #181818;
+}
+.privacy-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* الوضع الداكن */
+body.dark-mode .privacy-container {
+    background: #1e1e1e;
+    color: var(--text-color);
+    border: 1px solid #333;
+}
+body.dark-mode {
+    --text-color: #f0f0f0;     /* لون أبيض مريح للقراءة */
+    --light-text: #ccc;        /* لون فرعي */
+}

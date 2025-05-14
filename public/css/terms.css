@@ -1,0 +1,193 @@
+:root {
+    --sidebar-width: 280px;
+    --text-color: #222;
+    --light-text: #666;
+    --primary-color: #0066cc;
+}
+
+/* الوضع الداكن: إعادة تعريف المتغيرات */
+body.dark-mode {
+    --text-color: #f0f0f0;
+    --light-text: #ccc;
+}
+
+/* صفحة الشروط */
+.terms-page {
+    margin-right: var(--sidebar-width);
+    padding: 2rem;
+    min-height: calc(100vh - 72px);
+    margin-top: 72px;
+    background-color: #f8f9fa;
+}
+
+body.dark-mode .terms-page {
+    background-color: #181818;
+}
+
+/* صندوق الشروط */
+.terms-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .terms-container {
+    background: #1e1e1e;
+    color: var(--text-color);
+    border: 1px solid #333;
+}
+
+/* المقدمة */
+.terms-intro {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* أقسام */
+.terms-section {
+    margin-bottom: 2.5rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.section-content {
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.section-content p {
+    margin-bottom: 1rem;
+}
+
+.section-content ol {
+    padding-right: 1.5rem;
+    margin-bottom: 1rem;
+    counter-reset: item;
+}
+
+.section-content ol > li {
+    margin-bottom: 1rem;
+}
+
+.section-content ol ol {
+    margin: 1rem 0;
+    padding-right: 2rem;
+}
+
+.section-content ol ol > li {
+    margin-bottom: 0.5rem;
+}
+
+/* تعريفات */
+.definition-list dt {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.definition-list dd {
+    margin-bottom: 1.5rem;
+    padding-right: 1rem;
+    color: var(--light-text);
+}
+
+/* الرأس */
+.page-header {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+body.dark-mode .page-header {
+    background: linear-gradient(to right, #003f66, #001f33);
+    color: white;
+}
+
+.page-title {
+    font-size: 2rem;
+    color: white;
+}
+
+/* تنسيق رئيسي */
+.main-content {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+body.dark-mode .main-content {
+    background-color: #181818;
+    color: var(--text-color);
+}
+
+/* عناصر عامة في الوضع الداكن */
+body.dark-mode .search-container,
+body.dark-mode .search-form,
+body.dark-mode .modal-content,
+body.dark-mode .stats-box,
+body.dark-mode .content-box {
+    background-color: #1e1e1e !important;
+    border-color: #333 !important;
+    color: var(--text-color) !important;
+}
+
+/* الحقول */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* الأزرار */
+body.dark-mode .btn,
+body.dark-mode button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+
+body.dark-mode .btn:hover,
+body.dark-mode button:hover {
+    background-color: #444;
+}
+
+/* الروابط */
+body.dark-mode a {
+    color: var(--primary-color);
+}
+
+/* شريط جانبي */
+body.dark-mode .sidebar {
+    background-color: #1a1a1a;
+    border-right: 1px solid #333;
+}
+
+/* استجابة */
+@media (max-width: 992px) {
+    .terms-page {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .terms-page {
+        padding: 1rem;
+    }
+
+    .terms-container {
+        padding: 1.5rem;
+    }
+}
